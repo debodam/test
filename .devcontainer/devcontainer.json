@@ -1,0 +1,11 @@
+{
+    "name": "Jenkins CI/CD",
+    "image": "jenkins/jenkins:lts",
+    "forwardPorts": [8080],
+    "postCreateCommand": "echo 'Initial admin password:' && cat /var/jenkins_home/secrets/initialAdminPassword",
+    "customizations": {
+        "vscode": {
+            "extensions": ["github.codespaces"]
+        }
+    }
+}
